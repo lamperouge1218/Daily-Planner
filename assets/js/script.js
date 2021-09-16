@@ -1,7 +1,8 @@
 // moment().format("dddd, MMMM Do YYYY, h:mm:ss a")
 // good text for the header to be the date/time
 
-
+var time = moment().format("dddd, MMM Do, YYYY, HH:mm:ss a"); 
+$("#currentDay").text(time);
 
 // setInterval(() => {
     
@@ -10,7 +11,7 @@
 
 function currentTime() {
     setInterval(() => {
-        var time = moment().format("MMM Do, YYYY, HH:mm:ss a"); 
+        var time = moment().format("dddd, MMM Do, YYYY, HH:mm:ss a"); 
         $("#currentDay").text(time);
     }, 1000);
 };
