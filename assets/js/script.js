@@ -181,7 +181,6 @@ function addData17() {
     }
 };
 
-
 addData9();
 addData10();
 addData11();
@@ -192,25 +191,6 @@ addData15();
 addData16();
 addData17();
 
-// make a variable that is the .getItem equal to the stored value that we save on saveBtn click 
-
-
-// if (Element.dataset.hour < getCurrentTimeint) {
-//     appForm.addClass(pastColor);
-// };
-
-// WHEN I click into a timeblock
-// THEN I can enter an event
-    // Done as part of it being a form lol
-
-// WHEN I click the save button for that timeblock
-// THEN the text for that event is saved in local storage
-    // Button listener event throwing stuff into local storage. 
-    // Similar to previous assignment? Sending it to an array for string concat?
-
-// WHEN I refresh the page
-// THEN the saved events persist
-    // More saving stuff to localStorage
 
 
 
