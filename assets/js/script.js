@@ -5,6 +5,7 @@ var appForm = $(".appointment");
 var pastColor = $(".past");
 var presColor = $(".present");
 var futColor = $(".future");
+var input = $("<input>")
 
 
 var time = moment().format("dddd, MMM Do, YYYY, HH:mm:ss a"); 
@@ -36,12 +37,37 @@ currentTime();
 
 var format = "H";
 var currentTime = moment().format(format);
-var getCurrentTimeint = parseInt(currentTime);
-console.log(getCurrentTimeint);
+// var getCurrentTimeint = parseInt(currentTime);
+// console.log(getCurrentTimeint);
+console.log(currentTime);
 
-if (timeBlock < getCurrentTimeint) {
-    appForm.addClass(pastColor);
-};
+$("input").each (function () {
+    var hour9 = parseInt($(this).attr("id"));
+    console.log(hour9);
+    if (hour9 < currentTime){
+        $(this).addClass("past")
+    } else if (hour9 > currentTime) {
+        $(this).addClass("future")
+    } else {
+        $(this).addClass("present")
+    }
+});
+
+
+
+// if (moment(9).isBefore(currentTime)) {
+//     $("#9").addClass("past")
+// }else if (moment(9).isAfter(currentTime)) {
+//     $("#9").addClass("future")
+// }else {
+//     $("#9").addClass("present")
+// };
+
+
+
+// if (Element.dataset.hour < getCurrentTimeint) {
+//     appForm.addClass(pastColor);
+// };
 
 // WHEN I click into a timeblock
 // THEN I can enter an event
